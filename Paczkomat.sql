@@ -37,7 +37,7 @@ IF OBJECT_ID('UsersCredentials', 'U') IS NOT NULL
 GO
 
 CREATE TABLE Users (
-    UserID INT PRIMARY KEY,
+    UserID INT IDENTITY(1,1) PRIMARY KEY,
     Name NVARCHAR(255),
     Email NVARCHAR(255),
     Phone NVARCHAR(255),
@@ -45,7 +45,7 @@ CREATE TABLE Users (
 );
 
 CREATE TABLE Packages (
-    PackageID INT PRIMARY KEY,
+    PackageID INT IDENTITY(1,1) PRIMARY KEY,
     UserID INT FOREIGN KEY REFERENCES Users(UserID),
     TrackingCode NVARCHAR(255),
     Size NVARCHAR(255),
@@ -55,7 +55,7 @@ CREATE TABLE Packages (
 );
 
 CREATE TABLE Paczkomats (
-    PaczkomatID INT PRIMARY KEY,
+    PaczkomatID INT IDENTITY(1,1) PRIMARY KEY,
     Location NVARCHAR(255),
     PostalCode NVARCHAR(255),
     Capacity INT,
@@ -63,7 +63,7 @@ CREATE TABLE Paczkomats (
 );
 
 CREATE TABLE LockerSlots (
-    SlotID INT PRIMARY KEY,
+    SlotID INT IDENTITY(1,1) PRIMARY KEY,
     PaczkomatID INT FOREIGN KEY REFERENCES Paczkomats(PaczkomatID),
     Size NVARCHAR(255),
     Availability NVARCHAR(255)
