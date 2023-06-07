@@ -35,9 +35,6 @@ async def return_status(request: Request):
 
 
 
-
- 
-
 @app.get('/')
 async def root(request: Request):
     data_items = "Something to do"
