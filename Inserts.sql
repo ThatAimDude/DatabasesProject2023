@@ -116,3 +116,4 @@ VALUES (1, 'oliviat', 'qwerty789');
 
 INSERT INTO UsersCredentials (UserID, Username, Password)
 VALUES (2, 'ethanm', 'pass123');
+
