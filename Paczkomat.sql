@@ -51,8 +51,14 @@ CREATE TABLE Packages (
     Size NVARCHAR(255),
     Status NVARCHAR(255),
     PickupReminder BIT,
-    PickupNotificationMethod NVARCHAR(255)
+    PickupNotificationMethod NVARCHAR(255),
+    StatusStage1 NVARCHAR(255),
+    StatusStage2 NVARCHAR(255),
+    StatusStage3 NVARCHAR(255),
+    StatusStage4 NVARCHAR(255),
+    StatusStage5 NVARCHAR(255)
 );
+
 
 CREATE TABLE Paczkomats (
     PaczkomatID INT IDENTITY(1,1) PRIMARY KEY,

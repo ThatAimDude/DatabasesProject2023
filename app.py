@@ -26,11 +26,12 @@ async def return_status(request: Request):
     db = DataBase()
     status = db.return_status(tracking_code)
 
-    if status is None:
-        status = "Tracking code doesn't exist"
-    
-    context = {"request": request, "status_code": status}
+    if status is None or not any(s is not None for s in status):
+        status = None
+
+    context = {"request": request, "status_codes": status}
     return templates.TemplateResponse("status.html", context)
+
 
 
 

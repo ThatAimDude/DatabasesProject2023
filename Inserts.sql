@@ -5,12 +5,7 @@ VALUES ('John Doe', 'john.doe@example.com', '1234567890', '123 Main Street');
 INSERT INTO Users (Name, Email, Phone, Address)
 VALUES ('Jane Smith', 'jane.smith@example.com', '0987654321', '456 Elm Street');
 
--- Insert random data into the Packages table
-INSERT INTO Packages (UserID, TrackingCode, Size, Status, PickupReminder, PickupNotificationMethod)
-VALUES (1, 'ABC123', 'Small', 'In Transit', 1, 'Email');
 
-INSERT INTO Packages (UserID, TrackingCode, Size, Status, PickupReminder, PickupNotificationMethod)
-VALUES (2, 'DEF456', 'Medium', 'Delivered', 0, 'SMS');
 
 -- Insert random data into the Paczkomats table
 INSERT INTO Paczkomats (Location, PostalCode, Capacity, Accessibility)
@@ -50,21 +45,21 @@ INSERT INTO Users (Name, Email, Phone, Address)
 VALUES ('Ethan Martinez', 'ethan.martinez@example.com', '999888777', '123 Spruce Court');
 
 
--- Insert random data into the Packages table
-INSERT INTO Packages (UserID, TrackingCode, Size, Status, PickupReminder, PickupNotificationMethod)
-VALUES (3, 'GHI789', 'Large', 'In Transit', 1, 'Email');
+INSERT INTO Packages (UserID, TrackingCode, Size, Status, PickupReminder, PickupNotificationMethod, StatusStage1, StatusStage2, StatusStage3, StatusStage4, StatusStage5)
+VALUES (1, 'ABC123', 'Small', 'In Transit', 1, 'Email', 'Ordered', 'Shipped', 'In Transit', 'Delivered', 'Received');
 
-INSERT INTO Packages (UserID, TrackingCode, Size, Status, PickupReminder, PickupNotificationMethod)
-VALUES (4, 'JKL012', 'Small', 'Delivered', 0, 'SMS');
+INSERT INTO Packages (UserID, TrackingCode, Size, Status, PickupReminder, PickupNotificationMethod, StatusStage1, StatusStage2, StatusStage3, StatusStage4, StatusStage5)
+VALUES (2, 'DEF456', 'Medium', 'Delivered', 0, 'SMS', 'Ordered', 'Shipped', 'In Transit', 'Delivered', 'Received');
 
-INSERT INTO Packages (UserID, TrackingCode, Size, Status, PickupReminder, PickupNotificationMethod)
-VALUES (5, 'MNO345', 'Medium', 'In Transit', 1, 'Email');
+INSERT INTO Packages (UserID, TrackingCode, Size, Status, PickupReminder, PickupNotificationMethod, StatusStage1, StatusStage2, StatusStage3, StatusStage4, StatusStage5)
+VALUES (3, 'GHI789', 'Large', 'In Transit', 1, 'Email', 'Ordered', 'Shipped', 'In Transit', null, null);
 
-INSERT INTO Packages (UserID, TrackingCode, Size, Status, PickupReminder, PickupNotificationMethod)
-VALUES (1, 'PQR678', 'Large', 'Delivered', 0, 'SMS');
+INSERT INTO Packages (UserID, TrackingCode, Size, Status, PickupReminder, PickupNotificationMethod, StatusStage1, StatusStage2, StatusStage3, StatusStage4, StatusStage5)
+VALUES (4, 'JKL012', 'Small', 'Delivered', 0, 'SMS', 'Ordered', 'Shipped', null, null, null);
 
-INSERT INTO Packages (UserID, TrackingCode, Size, Status, PickupReminder, PickupNotificationMethod)
-VALUES (2, 'STU901', 'Small', 'In Transit', 1, 'Email');
+INSERT INTO Packages (UserID, TrackingCode, Size, Status, PickupReminder, PickupNotificationMethod, StatusStage1, StatusStage2, StatusStage3, StatusStage4, StatusStage5)
+VALUES (5, 'MNO345', 'Medium', 'In Transit', 1, 'Email', 'Ordered', null, null, null, null);
+
 
 
 -- Insert random data into the Paczkomats table

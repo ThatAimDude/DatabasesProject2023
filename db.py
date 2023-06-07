@@ -38,9 +38,14 @@ class DataBase:
         return self.cursor.rowcount
     
     def return_status(self, tracking_code):
-        self.cursor.execute(f"SELECT [Status] FROM [dbo].[Packages] WHERE [TrackingCode] = '{tracking_code}'")
-        data = self.cursor.fetchall()
-        return data[0][0] if data else None
+        self.cursor.execute(f"SELECT [StatusStage1], [StatusStage2], [StatusStage3], [StatusStage4], [StatusStage5] FROM [dbo].[Packages] WHERE [TrackingCode] = '{tracking_code}'")
+        data = self.cursor.fetchone()
+        return data if data else None
+
+
+
+
+
 
 
     
