@@ -57,25 +57,9 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="pricing.html">Pricing</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
+        
           <li><a href="contact.html" class="active">Track Package</a></li>
-          <li><a class="get-a-quote" href="signUp.html">Get a Quote</a></li>
+          <li><a class="get-a-quote" href="signUp.html">Login / Sign up</a></li>
         </ul>
       </nav><!-- .navbar -->
 
@@ -116,24 +100,22 @@
 
     <div class="row gy-4 mt-4">
 
-      <div class="col-lg-4">
-
-        <div class="row">
-          <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-6">
             <h2>Package Status</h2>
-          </div>
-          <div class="col-md-6">
-            <p>&#160; </p>
-            <p>{{ status_code[0][0] }}</p>
-          </div>
         </div>
+        <div class="col-md-6">
+            <p>{{ status_code if status_code else 'Tracking code not found' }}</p>
+        </div>
+    </div>
+    
+      
 
         <div class="info-item d-flex">
           <i class="bi bi-geo-alt flex-shrink-0"></i>
           <div>
             <h4>Package Location</h4>
             <p>A108 Adam Street, New York, NY 535022</p>
-            <p>&#160; &#160; &#160; </p>
           </div>
         </div><!-- End Info Item -->
 

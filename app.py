@@ -19,16 +19,20 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 #     context = {"request": request, "status_code": status_code}
 #     return templates.TemplateResponse("status.html", context)
 
-
 @app.post('/test')
 async def return_status(request: Request):
     form = await request.form()
     tracking_code = form.get('tracking-code')
     db = DataBase()
     status = db.return_status(tracking_code)
+
+    if status is None:
+        status = "Tracking code doesn't exist"
     
     context = {"request": request, "status_code": status}
     return templates.TemplateResponse("status.html", context)
+
+
 
 
  
@@ -53,6 +57,30 @@ async def root(request: Request):
     db = DataBase()
     data = db.select_all_items()
     return templates.TemplateResponse("items.html", {"request": request, "data": data})
+
+
+
+@app.get('/index.html')
+async def index(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
+
+@app.get('/services.html')
+async def services(request: Request):
+    return templates.TemplateResponse("services.html", {"request": request})
+
+@app.get('/pricing.html')
+async def pricing(request: Request):
+    return templates.TemplateResponse("pricing.html", {"request": request})
+
+@app.get('/signUp.html')
+async def signUp(request: Request):
+    return templates.TemplateResponse("SignUp.html", {"request": request})
+
+@app.get('/status.html')
+async def signUp(request: Request):
+    return templates.TemplateResponse("status.html", {"request": request})
+
+
 
 
 if __name__ == "__main__":
