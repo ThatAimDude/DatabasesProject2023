@@ -22,11 +22,6 @@ INSERT INTO LockerSlots (PaczkomatID, Size, Availability)
 VALUES (2, 'Large', 'Unavailable');
 
 -- Insert random data into the UsersCredentials table
-INSERT INTO UsersCredentials (UserID, Username, Password)
-VALUES (1, 'johndoe', 'password123');
-
-INSERT INTO UsersCredentials (UserID, Username, Password)
-VALUES (2, 'janesmith', 'qwerty456');
 
 -- Insert random data into the Users table
 INSERT INTO Users (Name, Email, Phone, Address)
@@ -96,19 +91,26 @@ INSERT INTO LockerSlots (PaczkomatID, Size, Availability)
 VALUES (2, 'Large', 'Available');
 
 
--- Insert random data into the UsersCredentials table
-INSERT INTO UsersCredentials (UserID, Username, Password)
-VALUES (3, 'michaelj', 'abc123');
 
-INSERT INTO UsersCredentials (UserID, Username, Password)
-VALUES (4, 'emilyd', 'xyz789');
-
-INSERT INTO UsersCredentials (UserID, Username, Password)
-VALUES (5, 'davidw', 'password456');
-
-INSERT INTO UsersCredentials (UserID, Username, Password)
-VALUES (1, 'oliviat', 'qwerty789');
-
-INSERT INTO UsersCredentials (UserID, Username, Password)
-VALUES (2, 'ethanm', 'pass123');
-
+INSERT INTO CityCosts (FromCity, ToCity, Cost)
+VALUES
+    ('Lublin', 'Warsaw', 40.00),
+    ('Lublin', 'Krakow', 50.00),
+    ('Lublin', 'Gdansk', 70.00),
+    ('Lublin', 'Wroclaw', 60.00),
+    ('Warsaw', 'Lublin', 40.00),
+    ('Warsaw', 'Krakow', 40.00),
+    ('Warsaw', 'Gdansk', 80.00),
+    ('Warsaw', 'Wroclaw', 70.00),
+    ('Krakow', 'Lublin', 50.00),
+    ('Krakow', 'Warsaw', 40.00),
+    ('Krakow', 'Gdansk', 90.00),
+    ('Krakow', 'Wroclaw', 80.00),
+    ('Gdansk', 'Lublin', 70.00),
+    ('Gdansk', 'Warsaw', 80.00),
+    ('Gdansk', 'Krakow', 90.00),
+    ('Gdansk', 'Wroclaw', 100.00),
+    ('Wroclaw', 'Lublin', 60.00),
+    ('Wroclaw', 'Warsaw', 70.00),
+    ('Wroclaw', 'Krakow', 80.00),
+    ('Wroclaw', 'Gdansk', 100.00);

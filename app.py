@@ -80,6 +80,45 @@ async def signUp(request: Request):
 
 
 
+@app.post('/signup')
+async def signup(request: Request):
+    form = await request.form()
+    username = form.get('username')
+    password = form.get('password')
+
+    db = DataBase() # Creating an instance of DataBase
+    db.insert_user_credentials(username, password) # Call the method on the instance
+
+    return RedirectResponse('/', status_code=302)
+
+
+
+    
+@app.get('/send_package.html')
+async def send_package(request: Request):
+    db = DataBase()
+    cities = db.get_all_cities()  # Retrieve all cities from the database
+    return templates.TemplateResponse("send_package.html", {"request": request, "cities": cities})
+
+
+
+@app.post('/calculate-cost')
+async def calculate_cost(request: Request):
+    form = await request.form()
+    send_from_city = form.get('send-from')
+    send_to_city = form.get('send-to')
+
+    if send_from_city and send_to_city:
+        db = DataBase()
+        cost = db.calculate_cost(send_from_city, send_to_city)
+        context = {"request": request, "send_from_city": send_from_city, "send_to_city": send_to_city, "cost": cost, "cities": db.get_all_cities()}
+        return templates.TemplateResponse("send_package.html", context)
+    else:
+        # Handle error when cities are not selected
+        context = {"request": request, "cost": None, "cities": db.get_all_cities()}
+        return templates.TemplateResponse("send_package.html", context)
+
+
 
 if __name__ == "__main__":
     import uvicorn

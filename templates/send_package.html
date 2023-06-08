@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City Selection</title>
+</head>
+
+<body>
+    <h1>Select Cities</h1>
+  
+    <form action="/calculate-cost" method="post">
+      <label for="send-from">Send from:</label>
+      <select id="send-from" name="send-from">
+        <option value="" selected disabled>Select a city</option>
+        {% for city in cities %}
+        <option value="{{ city }}">{{ city }}</option>
+        {% endfor %}
+      </select>
+  
+      <label for="send-to">Send to:</label>
+      <select id="send-to" name="send-to">
+        <option value="" selected disabled>Select a city</option>
+        {% for city in cities %}
+        <option value="{{ city }}">{{ city }}</option>
+        {% endfor %}
+      </select>
+  
+      <button type="submit">Calculate Cost</button>
+    </form>
+
+    <p id="cost">Cost: {{ cost if cost is not none else 'N/A' }}</p>
+
+  </body>
+
+
+</html>

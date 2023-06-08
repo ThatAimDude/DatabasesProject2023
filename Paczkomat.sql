@@ -76,7 +76,13 @@ CREATE TABLE LockerSlots (
 );
 
 CREATE TABLE UsersCredentials (
-    UserID INT PRIMARY KEY FOREIGN KEY REFERENCES Users(UserID),
     Username NVARCHAR(255),
     Password NVARCHAR(255)
+);
+
+CREATE TABLE CityCosts (
+    ID INT IDENTITY(1, 1) PRIMARY KEY,
+    FromCity NVARCHAR(255),
+    ToCity NVARCHAR(255),
+    Cost DECIMAL(10, 2)
 );

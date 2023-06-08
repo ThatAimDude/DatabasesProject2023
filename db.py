@@ -42,12 +42,25 @@ class DataBase:
         data = self.cursor.fetchone()
         return data if data else None
     
-
-
-
-
-
-
-
+    def insert_user_credentials(self, username, password):
+        self.cursor.execute(f"INSERT INTO [dbo].[UsersCredentials]([Username], [Password]) VALUES('{username}', '{password}')")
+        self.connection.commit()
+        return self.cursor.rowcount
     
-
+    def check_user_credentials(self, username, password):
+        self.cursor.execute(f"SELECT * FROM [dbo].[UsersCredentials] WHERE [Username] = '{username}' AND [Password] = '{password}'")
+        data = self.cursor.fetchone()
+        return data if data else None
+    
+    def calculate_cost(self, from_city, to_city):
+        self.cursor.execute("SELECT Cost FROM CityCosts WHERE FromCity = ? AND ToCity = ?", (from_city, to_city))
+        result = self.cursor.fetchone()
+        return result[0] if result else None
+    
+    def get_all_cities(self):
+        self.cursor.execute("SELECT DISTINCT FromCity FROM CityCosts")
+        from_cities = self.cursor.fetchall()
+        self.cursor.execute("SELECT DISTINCT ToCity FROM CityCosts")
+        to_cities = self.cursor.fetchall()
+        cities = [city[0] for city in from_cities + to_cities]  
+        return cities
