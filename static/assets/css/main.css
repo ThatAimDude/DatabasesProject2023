@@ -1,37 +1,21 @@
-/**
-* Template Name: Logis
-* Updated: Mar 10 2023 with Bootstrap v5.2.3
-* Template URL: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# Set main reusable colors and fonts using CSS variables
-# Learn more about CSS variables at https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
---------------------------------------------------------------*/
-/* Fonts */
 :root {
   --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-primary: "Inter", sans-serif;
   --font-secondary: "Poppins", sans-serif;
 }
 
-/* Colors */
+
 :root {
   --color-default: #0a0d13;
   --color-primary: #0d42ff;
   --color-secondary: #0e1d34;
 }
 
-/* Smooth scroll behavior */
 :root {
   scroll-behavior: smooth;
 }
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 body {
   font-family: var(--font-default);
   color: var(--color-default);
@@ -56,9 +40,6 @@ h6 {
   font-family: var(--font-primary);
 }
 
-/*--------------------------------------------------------------
-# Sections & Section Header
---------------------------------------------------------------*/
 section {
   padding: 80px 0;
   overflow: hidden;
@@ -127,9 +108,6 @@ section {
   }
 }
 
-/*--------------------------------------------------------------
-# Breadcrumbs
---------------------------------------------------------------*/
 .breadcrumbs .page-header {
   padding: 140px 0 80px 0;
   position: relative;
@@ -192,9 +170,6 @@ section {
   content: "/";
 }
 
-/*--------------------------------------------------------------
-# Scroll top button
---------------------------------------------------------------*/
 .scroll-top {
   position: fixed;
   visibility: hidden;
@@ -225,9 +200,6 @@ section {
   opacity: 1;
 }
 
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
 #preloader {
   position: fixed;
   inset: 0;
@@ -270,18 +242,12 @@ section {
   }
 }
 
-/*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
 }
 
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
 .header {
   transition: all 0.5s;
   z-index: 997;
@@ -307,9 +273,6 @@ section {
   font-family: var(--font-primary);
 }
 
-/*--------------------------------------------------------------
-# Desktop Navigation
---------------------------------------------------------------*/
 @media (min-width: 1280px) {
   .navbar {
     padding: 0;
@@ -446,9 +409,6 @@ section {
   }
 }
 
-/*--------------------------------------------------------------
-# Mobile Navigation
---------------------------------------------------------------*/
 @media (max-width: 1279px) {
   .navbar {
     position: fixed;
@@ -569,9 +529,6 @@ section {
   }
 }
 
-/*--------------------------------------------------------------
-# Featured Services Section
---------------------------------------------------------------*/
 .featured-services .service-item {
   position: relative;
   height: 100%;
@@ -629,9 +586,6 @@ section {
   color: var(--color-primary);
 }
 
-/*--------------------------------------------------------------
-# About Us Section
---------------------------------------------------------------*/
 .about .content h3 {
   font-weight: 700;
   font-size: 32px;
@@ -751,9 +705,6 @@ section {
   }
 }
 
-/*--------------------------------------------------------------
-# Services Section
---------------------------------------------------------------*/
 .services .card {
   border: 1px solid rgba(14, 29, 52, 0.15);
   background: #fff;
@@ -800,9 +751,6 @@ section {
   transform: scale(1.1);
 }
 
-/*--------------------------------------------------------------
-# Call To Action Section
---------------------------------------------------------------*/
 .call-to-action {
   background: linear-gradient(rgba(14, 29, 52, 0.6), rgba(14, 29, 52, 0.8)), url("../img/cta-bg.jpg") center center;
   background-size: cover;
@@ -844,9 +792,6 @@ section {
   border: 2px solid var(--color-primary);
 }
 
-/*--------------------------------------------------------------
-# Features Section
---------------------------------------------------------------*/
 .features {
   padding-top: 80px;
 }
@@ -890,9 +835,6 @@ section {
   margin-bottom: 0;
 }
 
-/*--------------------------------------------------------------
-# Pricing Section
---------------------------------------------------------------*/
 .pricing .pricing-item {
   padding: 60px 40px;
   box-shadow: 0 3px 20px -2px rgba(108, 117, 125, 0.15);
@@ -1006,9 +948,6 @@ section {
   }
 }
 
-/*--------------------------------------------------------------
-# Frequently Asked Questions Section
---------------------------------------------------------------*/
 .faq {
   padding-top: 80px;
 }
@@ -1064,9 +1003,6 @@ section {
   border-radius: 5px;
 }
 
-/*--------------------------------------------------------------
-# Testimonials Section
---------------------------------------------------------------*/
 .testimonials {
   padding: 80px 0;
   background: url("../img/testimonials-bg.jpg") no-repeat;
@@ -1174,9 +1110,6 @@ section {
   }
 }
 
-/*--------------------------------------------------------------
-# Stats Counter Section
---------------------------------------------------------------*/
 .stats-counter .stats-item {
   padding: 30px;
   width: 100%;
@@ -1214,9 +1147,6 @@ section {
   color: var(--color-secondary);
 }
 
-/*--------------------------------------------------------------
-# Our Team Section
---------------------------------------------------------------*/
 .team .member {
   text-align: center;
   margin-bottom: 20px;
@@ -1270,9 +1200,6 @@ section {
   margin: 0 2px;
 }
 
-/*--------------------------------------------------------------
-# Horizontal Pricing Section
---------------------------------------------------------------*/
 .horizontal-pricing .pricing-item {
   box-shadow: 0 3px 20px -2px rgba(108, 117, 125, 0.15);
   padding-bottom: 30px;
@@ -1382,9 +1309,7 @@ section {
   color: var(--color-primary);
 }
 
-/*--------------------------------------------------------------
-# Get a Quote Section
---------------------------------------------------------------*/
+
 .get-a-quote .quote-bg {
   min-height: 500px;
   background-size: cover;
@@ -1507,9 +1432,6 @@ section {
   }
 }
 
-/*--------------------------------------------------------------
-# Contact Section
---------------------------------------------------------------*/
 .contact .info-item+.info-item {
   margin-top: 40px;
 }
@@ -1631,9 +1553,6 @@ section {
   }
 }
 
-/*--------------------------------------------------------------
-# Service Details Section
---------------------------------------------------------------*/
 .service-details .services-list {
   padding: 10px 30px;
   border: 1px solid #d3dff3;
@@ -1697,9 +1616,6 @@ section {
   color: var(--color-primary);
 }
 
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
 .hero {
   width: 100%;
   min-height: 50vh;
@@ -1799,9 +1715,6 @@ section {
   font-weight: 600;
 }
 
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
 .footer {
   font-size: 14px;
   background-color: var(--color-secondary);
