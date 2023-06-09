@@ -1,6 +1,4 @@
 import pyodbc
-#WZORZEC PROJEKTOWY SINGLETONA GWARANTUJACY NAM ZE TYLKO
-#JEDNA INSTANCJA BAZY BEDZIE
 def singleton(class_):
     instances = {}
 
@@ -25,13 +23,11 @@ class DataBase:
         self.cursor = self.connection.cursor()
 
 
-    #SELECT ALL
     def select_all_items(self):
         self.cursor.execute(f"SELECT Value from [dbo].[Item]")
         data = self.cursor.fetchall()
         return data
 
-    #INSERT
     def insert(self, value):
         self.cursor.execute(f"INSERT INTO [dbo].[Item]([Value]) VALUES('{value}')")
         self.connection.commit()

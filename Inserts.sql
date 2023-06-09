@@ -1,29 +1,23 @@
--- Insert random data into the Users table
+
 INSERT INTO Users (Name, Email, Phone, Address)
 VALUES ('John Doe', 'john.doe@example.com', '1234567890', '123 Main Street');
 
 INSERT INTO Users (Name, Email, Phone, Address)
 VALUES ('Jane Smith', 'jane.smith@example.com', '0987654321', '456 Elm Street');
 
-
-
--- Insert random data into the Paczkomats table
 INSERT INTO Paczkomats (Location, PostalCode, Capacity, Accessibility)
 VALUES ('Paczkomat A', '12345', 100, 'Accessible');
 
 INSERT INTO Paczkomats (Location, PostalCode, Capacity, Accessibility)
 VALUES ('Paczkomat B', '67890', 200, 'Not Accessible');
 
--- Insert random data into the LockerSlots table
+
 INSERT INTO LockerSlots (PaczkomatID, Size, Availability)
 VALUES (1, 'Small', 'Available');
 
 INSERT INTO LockerSlots (PaczkomatID, Size, Availability)
 VALUES (2, 'Large', 'Unavailable');
 
--- Insert random data into the UsersCredentials table
-
--- Insert random data into the Users table
 INSERT INTO Users (Name, Email, Phone, Address)
 VALUES ('Michael Johnson', 'michael.johnson@example.com', '111222333', '789 Oak Avenue');
 
@@ -56,8 +50,6 @@ INSERT INTO Packages (UserID, TrackingCode, Size, Status, PickupReminder, Pickup
 VALUES (5, 'MNO345', 'Medium', 'In Transit', 1, 'Email', 'Ordered', null, null, null, null);
 
 
-
--- Insert random data into the Paczkomats table
 INSERT INTO Paczkomats (Location, PostalCode, Capacity, Accessibility)
 VALUES ('Paczkomat C', '13579', 150, 'Accessible');
 
@@ -74,7 +66,6 @@ INSERT INTO Paczkomats (Location, PostalCode, Capacity, Accessibility)
 VALUES ('Paczkomat G', '56789', 100, 'Not Accessible');
 
 
--- Insert random data into the LockerSlots table
 INSERT INTO LockerSlots (PaczkomatID, Size, Availability)
 VALUES (3, 'Small', 'Available');
 

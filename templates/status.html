@@ -9,16 +9,14 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <!-- Favicons -->
+
   <link href="/static/assets/img/favicon.png" rel="icon">
   <link href="/static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
   <link href="/static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="/static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="/static/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
@@ -26,27 +24,16 @@
   <link href="/static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="/static/assets/vendor/aos/aos.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
   <link href="/static/assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Logis
-  * Updated: Mar 10 2023 with Bootstrap v5.2.3
-  * Template URL: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
 
-  <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1>Logis</h1>
       </a>
 
@@ -55,103 +42,88 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
+
           <li><a href="pricing.html">Pricing</a></li>
         
           <li><a href="status.html" class="active">Track Package</a></li>
+          <li><a href="send_package.html">Send Package</a></li>
           <li><a class="get-a-quote" href="signUp.html">Login / Sign up</a></li>
         </ul>
-      </nav><!-- .navbar -->
+      </nav>
 
     </div>
-  </header><!-- End Header -->
-  <!-- End Header -->
+  </header>
 
   <main id="main">
 
-    <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs">
       <div class="page-header d-flex align-items-center" style="background-image: url('/static/assets/img/page-header.jpg');">
         <div class="container position-relative">
 
-          
           <div class="row d-flex justify-content-center">
             <div class="col-lg-6 text-center">
               <h2>Track Package</h2>
               
-              
-                <form id="searchForm" class="form-search d-flex align-items-stretch mb-3" action="/test" method="POST">
-                  <input name="tracking-code" id="trackingCodeInput" type="text" class="form-control" placeholder="Tracking Code">
-                  <button type="submit" class="btn btn-primary">Search</button>
-                </form>
-                
+              <form id="searchForm" class="form-search d-flex align-items-stretch mb-3" action="/test" method="POST">
+                <input name="tracking-code" id="trackingCodeInput" type="text" class="form-control" placeholder="Tracking Code">
+                <button type="submit" class="btn btn-primary">Search</button>
+              </form>
 
             </div>
           </div>
         </div>
       </div>
-      
-    </div><!-- End Breadcrumbs -->
-
-  </div><!-- End Breadcrumbs -->
-
-    <!-- ======= Contact Section ======= -->
-<section id="contact" class="contact">
-  <div class="container" data-aos="fade-up">
-
-    <div class="row gy-4 mt-4">
-
-      <div class="col-lg-4">
-
-        <div class="row">
-          <div class="col-md-6">
-              <h2>Package Status</h2>
-          </div>
-          <div class="col-md-6">
-            {% if status_codes %}
-                {% for status in status_codes %}
-                    <p>{{ status }}</p>
-                {% endfor %}
-            {% else %}
-                <p>Tracking code not found</p>
-            {% endif %}
-        </div>
-        
-        
-        
-      </div>
-      
-
-        <div class="info-item d-flex">
-          <i class="bi bi-geo-alt flex-shrink-0"></i>
-          <div>
-            <h4>Package Location</h4>
-            <p>A108 Adam Street, New York, NY 535022</p>
-          </div>
-        </div><!-- End Info Item -->
-
-      </div>
-
     </div>
 
-    <div>
-      <iframe style="border:0; width: 100%; height: 340px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
-    </div><!-- End Google Maps -->
-  </div>
-</section><!-- End Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
 
-  </main><!-- End #main -->
+        <div class="row gy-4 mt-4">
 
-  <!-- ======= Footer ======= -->
+          <div class="col-lg-4">
+
+            <div class="row">
+              <div class="col-md-6">
+                <h2>Package Status</h2>
+              </div>
+              <div class="col-md-6">
+                {% if status_codes %}
+                  {% for status in status_codes %}
+                    <p>{{ status }}</p>
+                  {% endfor %}
+                {% else %}
+                  <p>Tracking code not found</p>
+                {% endif %}
+              </div>
+            </div>
+
+            <div class="info-item d-flex">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h4>Package Location</h4>
+                <p>A108 Adam Street, New York, NY 535022</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div>
+          <iframe style="border:0; width: 100%; height: 340px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
   <footer id="footer" class="footer">
-
     <div class="container">
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-info">
           <a href="index.html" class="logo d-flex align-items-center">
             <span>Logis</span>
           </a>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+          <p>At Logis, we provide efficient logistics and delivery services to ensure seamless transportation and storage of goods. Trust us with your logistics needs.</p>
           <div class="social-links d-flex mt-4">
             <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
             <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
@@ -159,65 +131,48 @@
             <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
-
         <div class="col-lg-2 col-6 footer-links">
           <h4>Useful Links</h4>
           <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
+            <li><a href="#">About Us</a></li>
             <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
           </ul>
         </div>
-
         <div class="col-lg-2 col-6 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
+            <li><a href="#">Transportation</a></li>
+            <li><a href="#">Warehousing</a></li>
+            <li><a href="#">Supply Chain Management</a></li>
+            <li><a href="#">Cargo Services</a></li>
+            <li><a href="#">Packaging Solutions</a></li>
           </ul>
         </div>
-
         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
           <h4>Contact Us</h4>
           <p>
-            A108 Adam Street <br>
-            New York, NY 535022<br>
+            123 Main Street <br>
+            City, State 12345<br>
             United States <br><br>
-            <strong>Phone:</strong> +1 5589 55488 55<br>
-            <strong>Email:</strong> info@example.com<br>
+            <strong>Phone:</strong> +1 555 12345<br>
+            <strong>Email:</strong> info@logis.com<br>
           </p>
-
         </div>
-
       </div>
     </div>
-
     <div class="container mt-4">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Logis</span></strong>. All Rights Reserved
-      </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/ -->
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
-
-  </footer><!-- End Footer -->
-  <!-- End Footer -->
-
+  </footer>
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
   <script src="/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="/static/assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="/static/assets/vendor/glightbox/js/glightbox.min.js"></script>
@@ -225,7 +180,6 @@
   <script src="/static/assets/vendor/aos/aos.js"></script>
   <script src="/static/assets/vendor/php-email-form/validate.js"></script>
 
-  <!-- Template Main JS File -->
   <script src="/static/assets/js/main.js"></script>
 
 </body>
